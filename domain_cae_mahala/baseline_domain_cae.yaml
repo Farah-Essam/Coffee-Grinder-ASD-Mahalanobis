@@ -1,0 +1,35 @@
+--dataset_directory: ./data
+--result_directory: ./results
+--export_dir: baseline_domain_cae
+
+--use_cuda: True
+--log_interval: 100
+--model: DCASE2023T2-Domain-CAE
+--model_type: domain_cae
+--score: DOMAIN_MAHALA
+--domain_scoring_mode: weighted
+--lambda_domain: 0.05
+--domain_prob_clip: 0.05
+--seed: 13711
+--is_auto_download: False
+
+--max_fpr: 0.1
+--decision_threshold: 0.9
+
+# feature
+--n_mels: 128
+--frames: 5
+--frame_hop_length: 1
+--n_fft: 1024
+--hop_length: 512
+--power: 2.0
+--fmin: 0.0
+--fmax: null
+--win_length: null
+
+# fit
+--batch_size: 256
+--epochs: 100
+-lr: 0.001
+--shuffle: True
+--validation_split: 0.1
